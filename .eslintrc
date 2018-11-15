@@ -1,0 +1,76 @@
+{
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "rules": {
+    "comma-dangle": ["warn", "only-multiline"],
+    "function-paren-newline": ["warn", "consistent"],
+    "import/no-extraneous-dependencies": [
+      "warn",
+      {
+        "devDependencies": [
+          "**/*.test.js",
+          "**/*.story.js",
+          "./scripts/**/*.js"
+        ],
+        "optionalDependencies": false
+      }
+    ],
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": []
+      }
+    ],
+    "jsx-a11y/label-has-for": [
+      "error",
+      {
+        "required": {
+          "some": ["nesting", "id"]
+        }
+      }
+    ],
+    "jsx-a11y/no-noninteractive-element-to-interactive-role": [
+      "error",
+      {
+        "fieldset": ["radiogroup"],
+        "li": ["menuitem", "option", "row", "tab", "treeitem"],
+        "ol": ["listbox", "menu", "menubar", "radiogroup", "tablist", "tree", "treegrid"],
+        "table": ["grid"],
+        "td": ["gridcell"],
+        "ul": ["listbox", "menu", "menubar", "radiogroup", "tablist", "tree", "treegrid"]
+      }
+    ],
+    "no-unused-expressions": [
+      "warn",
+      {
+        "allowTaggedTemplates": true
+      }
+    ],
+    "no-unused-vars": [
+      "warn",
+      {
+        "args": "after-used",
+        "varsIgnorePattern": "^restProps$"
+      }
+    ],
+    "react/jsx-filename-extension": "off",
+    "react/jsx-max-props-per-line": [
+      "warn",
+      {
+        "maximum": 1,
+        "when": always
+      }
+    ],
+    "react/jsx-first-prop-new-line": "warn",
+    "react/jsx-sort-default-props": "warn",
+    "react/no-did-mount-set-state": "off",
+    "react/no-did-update-set-state": "off",
+    "react/sort-prop-types": "warn",
+    "semi": ["warn", "never"]
+  },
+  "env": {
+    "jest": true,
+    "browser": true,
+    "node": true
+  }
+}
