@@ -1,5 +1,7 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { render } from 'react-dom'
 import App from './components/App'
 
-ReactDOM.render(<App />, document.getElementById('app'))
+const container = document.getElementById('app')
+document.body.appendChild(container)
+render(<App />, container)
