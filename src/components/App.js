@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Tabs } from '@olive/react'
 
+import TabContent from './TabContent'
+
 class App extends Component {
   constructor(props) {
     super(props)
@@ -22,36 +24,21 @@ class App extends Component {
             onClick={() => this.handleSelect(0)}
             selected={selectedIndex === 0}
           >
-            <h1>Tab 1 Content</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
+            <TabContent title="Tab 1 Content" />
           </Tabs.Tab>
           <Tabs.Tab
             label="tab two"
             onClick={() => this.handleSelect(1)}
             selected={selectedIndex === 1}
           >
-            <h1>Tab 2 Content</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
+            <TabContent title="Tab 2 Content" />
           </Tabs.Tab>
           <Tabs.Tab
             label="tab three"
             onClick={() => this.handleSelect(2)}
             selected={selectedIndex === 2}
           >
-            <h1>Tab 3 Content</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
+            <TabContent title="Tab 3 Content" />
           </Tabs.Tab>
         </Tabs>
       </div>
